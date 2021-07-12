@@ -1,0 +1,10 @@
+venv\Scripts\activate 
+pip install --upgrade scrapy
+cd amazon_Scraper 
+scrapy crawl amz_spider -o rough.csv
+
+class AmzSpiderSpider(scrapy.Spider):
+    name = 'amz_spider'
+    start_urls = data['address'].tolist()
+
+    
